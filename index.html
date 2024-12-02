@@ -1,0 +1,17 @@
+<body>
+    <h1>Courses</h1>
+    <select name ="list" id="list"></select>
+    <script>
+        document.addEventListener("DOMContentLoaded", async ()=>{
+
+            const r = await fetch("http://127.0.0.1:8081/api/courses/", { //r is short for request or raw
+                method: "GET"
+            }); //get json text
+
+            const data = await req,json(); //parse
+
+            data.forEach
+
+        }); //end of DOM content loaded
+    </script>
+</body>
