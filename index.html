@@ -8,10 +8,13 @@
                 method: "GET"
             }); //get json text
 
-            const data = await req,json(); //parse
+            const data = await r.json(); //parse - to take giant string to cut into little peices of data (convert from giant text to little data)
 
-            data.forEach
+            data.forEach(o => list.appendChild(new Option(o.courseName, o.id)))
 
         }); //end of DOM content loaded
+        // {} to create object 
+        // [] to create an array
+        // "key": "course name", (comma seperates every pair) (after colon is the value, ex: defining the name of the propert (color is red or purple, etc)) (keys is the name of the property, ex: color)
     </script>
 </body>
