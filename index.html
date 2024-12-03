@@ -1,8 +1,23 @@
 <body>
     <h1>Courses</h1>
+    <form action="">
     <select name ="list" id="list"></select>
     <div id="courseTarget">?</div>
+    <button id="saveBtn">Save</button>
+    <button id="deleteBtn">Delete</button>
+    <button id="newBtn">Clear Form</button>
+</form>
     <script>
+        function render(data) {
+            data.forEach(o => list.appendChild(new Option(0.courseName + " - #" + o.id, o.id)));
+        }
+
+        function blankk(){
+            courseTarget.innerHTML = 
+        }
+
+
+
         document.addEventListener("DOMContentLoaded", async ()=>{
 
             const r = await fetch("http://127.0.0.1:8081/api/courses/", { //r is short for request or raw
